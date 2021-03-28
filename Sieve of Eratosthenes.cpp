@@ -6,7 +6,7 @@ using namespace std;
 
 void SieveOfEratosthenes(int n)
 {
-	
+
 	bool prime[n + 1];
 	memset(prime, true, sizeof(prime));
 
@@ -15,7 +15,7 @@ void SieveOfEratosthenes(int n)
 		if (prime[p] == true)
 		{
 
-			for (int i = p * p; i < n; i ++)
+			for (int i = p * p; i < n; i++)
 				prime[i] = false;
 		}
 	}
@@ -31,7 +31,7 @@ int main()
 {
 	int n = 30;
 	cout << "Following are the prime numbers smaller "
-		<< " than or equal to " << n << endl;
+		 << " than or equal to " << n << endl;
 	SieveOfEratosthenes(n);
 	return 0;
 }
